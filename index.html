@@ -1,17 +1,50 @@
 <html>
-    <head>
-    </head>
-    <body>
-        <label >Your Id:</label>
-        <input type="text" id="yourId" />
-        <label >Other Id:</label>
-        <input type="text" id="otherId" />    
-        <input type="button" id="connect" value="Connect">
 
-        <label>Enter Message:</label><input type="text" id="yourMessage" />
-        <button id="send">Send Message</button>
-        <pre id="messages"></pre>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="site.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+</head>
 
-        <script src="bundle.js" charset="utf-8"></script>        
-    </body>
+<body>
+    <div class="container">
+        <h1><label class="form-control label label-default"> Your Id:</label></h1>
+        <input type="text" id="yourId" class="form-control" /></br>
+        </br>
+        <h1><label class="form-control label label-default"> Others Id:</label></h1>
+        <input type="text" id="otherId" class="form-control" /></br>
+        <input type="button" id="connect" value="Connect" class="form-control btn btn-success" /></br>
+        </br>
+        <input type="button" id="startVideo" value="Start Video" class="form-control btn btn-success" data-toggle="modal" data-target="#videoModal"></br>
+        <h1><label class="form-control label label-default">Enter Message:</label></h1>
+        <input type="text" class="form-control" id="yourMessage" /></br>
+        <button id="send" class="form-control btn-success">Send Message</button></br>
+        </br>
+        <pre class="form-control" id="messages"></pre>
+        </br>
+        </br>
+
+        <!-- Modal -->
+        <div id="videoModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <video id="streamingVideo" autoplay></video>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="bundle.js" charset="utf-8"></script>
+</body>
+
 </html>

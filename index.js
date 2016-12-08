@@ -27,11 +27,7 @@ navigator.webkitGetUserMedia({ video: true, audio: true }, function (stream) {
     })
 
     peer.on('stream',function(stream){
-        var video=document.createElement('video');
-        document.body.appendChild(video)
-
-        video.src=window.URL.createObjectURL(stream)
-        video.play();
+       document.getElementById('streamingVideo').src=window.URL.createObjectURL(stream)        
     })
 }, function (err) {
     console.error(err);
